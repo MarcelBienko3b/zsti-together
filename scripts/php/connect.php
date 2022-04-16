@@ -6,7 +6,7 @@
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
 
     // Database connection
-    $conn = new mysqli('localhost','root','','zsti_emergency_database');
+    $conn = new mysqli('localhost','root','','zsti_together_database');
     if($conn->connect_error){
         echo "$conn->connect_error";
         die("Connection Failed : ". $conn->connect_error);

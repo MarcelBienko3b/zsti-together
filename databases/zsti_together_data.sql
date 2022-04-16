@@ -1,6 +1,6 @@
-use zsti_emergency_database;
+use zsti_together_database;
 
-insert into zsti_classes (class__name) values
+insert into classes (class__name) values
     ('-'),
     ('1i21'),
     ('1b21'),
@@ -27,17 +27,15 @@ insert into zsti_classes (class__name) values
     ('4ei18'),
     ('4pr18');
 
-insert into zsti_roles (role__name) values
-    ('administrator'),
-    ('moderator'),
+insert into roles (role__name) values
     ('teacher'),
     ('student');
 
-insert into zsti_types (type__name) values
+insert into types (type__name) values
     ('kolko dodatkowe'),
     ('pomoc kolezenska');
 
-insert into zsti_subjects(subject__name) values
+insert into subjects(subject__name) values
     ('matematyka'),
     ('polski'),
     ('informatyka'),
@@ -51,7 +49,8 @@ insert into zsti_subjects(subject__name) values
     ('aplikacje internetowe - js'),
     ('projektowanie stron internetowych');
 
-insert into zsti_users (user__role, user__firstName, user__lastName, user__email, user__password, user__class) values
-    (4, 'Marcel', 'Bienko', 'byenio@gmail.com', '123123', 14),
-    (4, 'Marcel', 'Lis', 'lis@gmail.com', '321321', 14),
-    (1, 'Admin', 'Bienko', 'admin@gmail.com', '123321', 1);
+insert into tutors (tutor__role, tutor__firstName, tutor__lastName, tutor__email, tutor__password, tutor__class) values
+    (2, 'Marcel', 'Bienko', 'byenio@gmail.com', '123123', 14),
+    (2, 'Marcel', 'Lis', 'lis@gmail.com', '321321', 14);
+
+
