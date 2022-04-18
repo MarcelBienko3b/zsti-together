@@ -1,5 +1,4 @@
-drop database if exists zsti_together_database;
-create database zsti_together_database character set utf8 COLLATE utf8_general_ci;
+create database if not exists zsti_together_database character set utf8 COLLATE utf8_general_ci;
 use zsti_together_database;
 
 create table classes (
