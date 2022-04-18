@@ -1,28 +1,28 @@
 create database if not exists zsti_together_database character set utf8 COLLATE utf8_general_ci;
 use zsti_together_database;
 
-create table classes (
+create table if not exists classes (
 
     class__id int not null auto_increment primary key,
     class__name varchar(5) not null /*should look like this: 3b19 -> name of class 3b + year of beginning 2019*/
 
 );
 
-create table roles (
+create table if not exists roles (
 
     role__id int not null auto_increment primary key,
     role__name varchar(50) not null
 
 );
 
-create table types (
+create table if not exists types (
 
     type__id int not null auto_increment primary key,
     type__name varchar(50) not null
 
 );
 
-create table tutors (
+create table if not exists tutors (
 
     tutor__id int not null auto_increment primary key,
     tutor__firstName varchar(50) not null,
@@ -37,25 +37,25 @@ create table tutors (
 
 );
 
-create table tutees (
+create table if not exists tutees (
 
     tutee__id int not null auto_increment primary key,
     tutee__firstName varchar(50) not null,
     tutee__lastName varchar(50) not null,
     tutee__email varchar(50) not null,
     tutee__password varchar(50) not null,
-    tutee__class int not null
+    tutee__class varchar(4) not null
 
 );
 
-create table subjects (
+create table if not exists subjects (
 
     subject__id int not null auto_increment primary key,
     subject__name varchar(50) not null
 
 );
 
-create table posts (
+create table if not exists posts (
 
     post__id int not null auto_increment primary key,
     post__body varchar(255) not null,
@@ -69,14 +69,14 @@ create table posts (
 
 );
 
-create table connections (
+create table if not exists requests (
 
-    connection__id int not null auto_increment primary key,
-    connection__date datetime not null,
-    connection__post int,
-    connection__tutee int,
+    request__id int not null auto_increment primary key,
+    request__date datetime not null,
+    request__post int,
+    request__tutee int,
     
-    constraint fk_connection__post foreign key (connection__post) references posts (post__id) on update restrict on delete restrict,
-    constraint fk_connection__tutee foreign key (connection__tutee) references tutees (tutee__id) on update restrict on delete restrict
+    constraint fk_request__post foreign key (request__post) references posts (post__id) on update restrict on delete restrict,
+    constraint fk_request__tutee foreign key (request__tutee) references tutees (tutee__id) on update restrict on delete restrict
 
 );
