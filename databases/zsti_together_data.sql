@@ -1,41 +1,40 @@
 use zsti_together_database;
 
-insert into classes (class__name) values
-    ('-'),
-    ('1i21'),
-    ('1b21'),
-    ('1c21'),
-    ('1d21'),
-    ('1ei21'),
-    ('1pr21'),
-    ('2i20'),
-    ('2b20'),
-    ('2c20'),
-    ('2d20'),
-    ('2ei20'),
-    ('2pr20'),
-    ('3i19'),
-    ('3b19'),
-    ('3c19'),
-    ('3d19'),
-    ('3ei19'),
-    ('3pr19'),
-    ('4i18'),
-    ('4b18'),
-    ('4c18'),
-    ('4d18'),
-    ('4ei18'),
-    ('4pr18');
+insert into teachers (teacher__firstName, teacher__lastName, teacher__email, teacher__password) values
+    ('Jan', 'Kowalski', 'jk@gmail.com', '123321');
 
-insert into roles (role__name) values
-    ('teacher'),
-    ('student');
+insert into classes (class__name, class__teacher) values
+    ('-', 1),
+    ('1i', 1),
+    ('1b', 1),
+    ('1c', 1),
+    ('1d', 1),
+    ('1ei', 1),
+    ('1pr', 1),
+    ('2i', 1),
+    ('2b', 1),
+    ('2c', 1),
+    ('2d', 1),
+    ('2ei', 1),
+    ('2pr', 1),
+    ('3i', 1),
+    ('3b', 1),
+    ('3c', 1),
+    ('3d', 1),
+    ('3ei', 1),
+    ('3pr', 1),
+    ('4i', 1),
+    ('4b', 1),
+    ('4c', 1),
+    ('4d', 1),
+    ('4ei', 1),
+    ('4pr', 1);
 
 insert into types (type__name) values
     ('kolko dodatkowe'),
     ('pomoc kolezenska');
 
-insert into subjects(subject__name) values
+insert into subjects (subject__name) values
     ('matematyka'),
     ('polski'),
     ('informatyka'),
@@ -49,8 +48,5 @@ insert into subjects(subject__name) values
     ('aplikacje internetowe - js'),
     ('projektowanie stron internetowych');
 
-insert into tutors (tutor__role, tutor__firstName, tutor__lastName, tutor__email, tutor__password, tutor__class) values
-    (2, 'Marcel', 'Bienko', 'byenio@gmail.com', '123123', 14),
-    (2, 'Marcel', 'Lis', 'lis@gmail.com', '321321', 14);
-
-
+-- insert into students (student__firstName, student__lastName, student__email, student__password, student__class) values
+    -- ()
