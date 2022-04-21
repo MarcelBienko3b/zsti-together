@@ -15,7 +15,7 @@ create table if not exists teachers (
 create table if not exists classes (
 
     class__id int not null auto_increment primary key,
-    class__name varchar(5) not null, /*should look like this: 3b19 -> name of class 3b + year of beginning 2019*/
+    class__name varchar(5) not null, /* 3b19 -> name of class 3b + year of beginning 2019 */
     class__teacher int not null,
 
     constraint fk_class__teacher foreign key (class__teacher) references teachers (teacher__id) on update cascade on delete cascade 
@@ -55,7 +55,8 @@ create table if not exists tutors (
     tutor__subject int not null,
 
     constraint fk_tutor__id foreign key (tutor__id) references students (student__id) on update cascade on delete cascade,
-    constraint fk_tutor__subject foreign key (tutor__subject) references subjects (subject__id) on update cascade on delete cascade 
+    constraint fk_tutor__subject foreign key (tutor__subject) references subjects (subject__id) on update cascade on delete cascade
+
 );
 
 create table if not exists tutees (
@@ -68,6 +69,7 @@ create table if not exists tutees (
     tutee__class int not null,
 
     constraint fk_tutee__class foreign key (tutee__class) references classes (class__id) on update cascade on delete restrict
+
 );
 
 create table if not exists posts (
