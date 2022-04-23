@@ -15,13 +15,15 @@
             die("Connection Failed : ". $conn->connect_error);
         } else {
             $stmt = $conn->prepare("insert into students(student__firstName, student__lastName, student__email, student__password, student__class) values(?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $firstName, $lastName, $email, $password, $class);
+            $stmt->bind_param("ssssi", $firstName, $lastName, $email, $password, $class);
             $execval = $stmt->execute();
-            echo "Registered successfully...";
             $stmt->close();
             $conn->close();
+
+            header("Location: ../../subpages/registered.php");
+            exit();
         }
     } else {
-        echo 'Podaj poprawne haslo';
+        echo 'Twoje hasła się różnią';
     }
 ?>

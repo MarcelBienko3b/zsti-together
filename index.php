@@ -45,22 +45,17 @@
 
                           $dropdown_class_select = new mysqli('localhost','root','','zsti_together_database');
                           $classNum = mysqli_query($dropdown_class_select, 'select * from classes');
-                          $class_table = array();
+                          $class_arr = array();
                           while ($row = mysqli_fetch_array($classNum, MYSQLI_NUM)) {
-                            $class_table[$row[1]] = $row[2];
+                            $class_arr[$row[0]] = $row[1];
                           }
 
-                          foreach ($class_table as $key => $class) {
-                            echo '<option value=' . $key . '>' . $key . '</option>';
+                          foreach ($class_arr as $key => $id) {
+                            echo '<option value=' . $key . '>' . $id . '</option>';
                           }
 
                         ?>
                       </select>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="tutor">Chcę zostać pomagającym</label>
-                      <input type="checkbox" class="form-control" id="tutor" name="tutor"/>
                     </div>
 
                     <input type="submit" class="btn btn-primary" />
