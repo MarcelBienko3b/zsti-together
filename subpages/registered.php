@@ -12,9 +12,14 @@
         
         $db_login = new mysqli('localhost','root','','zsti_together_database');
         $students_query = '
-            select students.student__id, students.student__firstName, students.student__lastName, classes.class__name from students inner join classes on students.student__class=classes.class__id;
+            select  students.student__id,
+                    students.student__firstName,
+                    students.student__lastName,
+                    classes.class__name
+            from students
+            inner join classes
+            on students.student__class=classes.class__id;
         ';
-        echo $students_query;
         if ($studentResults = mysqli_query($db_login, $students_query)) {
 
             $students=array();

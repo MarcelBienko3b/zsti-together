@@ -2,12 +2,13 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Student panel</title>
+    <title>Teacher panel</title>
 </head>
 <body>
 
 <?php
     session_start();
+    print_r($_SESSION['teacher']);
     print_r($_SESSION['student']);
 ?>
     
