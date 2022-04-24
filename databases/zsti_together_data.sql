@@ -49,7 +49,7 @@ insert into subjects (subject__name) values
     ('projektowanie stron internetowych');
 
 insert into students (student__firstName, student__lastName, student__email, student__password, student__class) values 
-    ('Jurek', 'Ogórek', 'jo@gmail.com', '123', 17);
+    ('Jurek', 'Ciurek', 'jo@gmail.com', '123', 17);
 
 insert into tutors (tutor__id, tutor__subject) values
     (1, 1);

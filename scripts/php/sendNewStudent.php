@@ -3,8 +3,12 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
-    $checkPassword = password_verify($_POST['checkPassword'], $password);
+    $password = md5($_POST['password']);
+    if ($_POST['checkPassword'] == $_POST['password']) {
+        $checkPassword = true;
+    } else {
+        $checkPassword = false;
+    }
     $class = $_POST['class'];
 
     // Database connection

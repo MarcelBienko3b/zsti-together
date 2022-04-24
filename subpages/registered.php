@@ -10,38 +10,23 @@
 
         session_start();
         
-        $display_tutors = new mysqli('localhost','root','','zsti_together_database');
-        $tutors_query = '
-            select tutors.tutor__id, students.student__firstName, students.student__lastName, classes.class__name, subjects.subject__name from tutors
-            inner join students on students.student__id = tutors.tutor__id
-            inner join classes on classes.class__id = students.student__class
-            inner join subjects on subjects.subject__id = tutors.tutor__subject;
+        $db_login = new mysqli('localhost','root','','zsti_together_database');
+        $students_query = '
+            select students.student__id, students.student__firstName, students.student__lastName, classes.class__name from students inner join classes on students.student__class=classes.class__id;
         ';
+        echo $students_query;
+        if ($studentResults = mysqli_query($db_login, $students_query)) {
 
-        if ($stmt = mysqli_prepare($display_tutors, $tutors_query)) {
-
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt, $tutor__id, $firstName, $lastName, $class, $subject);
-
-            while (mysqli_stmt_fetch($stmt)) {
-                $_SESSION['tutor_id'] = $tutor__id;
-                $_SESSION['first_name'] = $firstName;
-                $_SESSION['last_name'] = $lastName;
-                $_SESSION['class'] = $class;
-                $_SESSION['subject'] = $subject;
-
-                printf("%s %s | %s - %s", $firstName, $lastName, $class, $subject);
-                echo '<br>';
+            $students=array();
+            while ($row = mysqli_fetch_array($studentResults, MYSQLI_NUM)) {
+                $students[$row[0]] = $row;
             }
 
-            mysqli_stmt_close($stmt);
-
         }
-
-        mysqli_close($display_tutors);
+        print_r($students);
+        mysqli_close($db_login);
 
         echo '<br>';
-        print_r($_SESSION);
 
     ?>
     

@@ -59,18 +59,6 @@ create table if not exists tutors (
 
 );
 
-create table if not exists tutees (
-
-    tutee__id int not null auto_increment primary key,
-    tutee__firstName varchar(50) not null,
-    tutee__lastName varchar(50) not null,
-    tutee__email varchar(50) not null,
-    tutee__password varchar(50) not null,
-    tutee__class int not null,
-
-    constraint fk_tutee__class foreign key (tutee__class) references classes (class__id) on update cascade on delete restrict
-
-);
 
 create table if not exists posts (
 
