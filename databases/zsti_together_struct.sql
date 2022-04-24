@@ -81,9 +81,9 @@ create table if not exists requests (
     request__id int not null auto_increment primary key,
     request__date datetime not null,
     request__post int,
-    request__tutee int,
+    request__student int,
     
     constraint fk_request__post foreign key (request__post) references posts (post__id) on update restrict on delete restrict,
-    constraint fk_request__tutee foreign key (request__tutee) references tutees (tutee__id) on update restrict on delete restrict
+    constraint fk_request__student foreign key (request__student) references students (student__id) on update restrict on delete restrict
 
 );
