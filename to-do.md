@@ -1,7 +1,7 @@
 # zsti-together
  
 ### Założenia
-- [ ] Wybór logowania / rejestracji na ekranie powitalnym strony - uczeń / nauczyciel / rejestracja
+- [x] Wybór logowania / rejestracji na ekranie powitalnym strony - uczeń / nauczyciel / rejestracja
 - [ ] Rejestracja -> zgłoszenie na tutora w panelu zarządzania użytkownikiem -> powiadomienie i zaakceptowanie w panelu zarządzania u nauczyciela
 - [ ] Główny ekran strony:\
 
