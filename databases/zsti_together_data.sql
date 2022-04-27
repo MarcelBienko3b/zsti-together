@@ -1,7 +1,21 @@
 use zsti_together_database;
 
-insert into teachers (teacher__firstName, teacher__lastName, teacher__email, teacher__password) values
-    ('Jan', 'Kowalski', 'jk@gmail.com', '123321');
+insert into subjects (subject__name) values
+    ('matematyka'),
+    ('polski'),
+    ('informatyka'),
+    ('sieci'),
+    ('bazy danych'),
+    ('serwery'),
+    ('angielski'),
+    ('fizyka'),
+    ('biologia'),
+    ('aplikacje internetowe - php'),
+    ('aplikacje internetowe - js'),
+    ('projektowanie stron internetowych');
+
+insert into teachers (teacher__firstName, teacher__lastName, teacher__email, teacher__password, teacher__subject) values
+    ('Jan', 'Kowalski', 'jk@gmail.com', 'e06e2e2ff2f00cf0076710724efaa07b', 4);
 
 insert into classes (class__name, class__teacher) values
     ('-', 1),
@@ -34,22 +48,8 @@ insert into types (type__name) values
     ('kolko dodatkowe'),
     ('pomoc kolezenska');
 
-insert into subjects (subject__name) values
-    ('matematyka'),
-    ('polski'),
-    ('informatyka'),
-    ('sieci'),
-    ('bazy danych'),
-    ('serwery'),
-    ('angielski'),
-    ('fizyka'),
-    ('biologia'),
-    ('aplikacje internetowe - php'),
-    ('aplikacje internetowe - js'),
-    ('projektowanie stron internetowych');
-
 insert into students (student__firstName, student__lastName, student__email, student__password, student__class) values 
-    ('Jurek', 'Ciurek', 'jo@gmail.com', '123', 17);
+    ('Jurek', 'Ciurek', 'jo@gmail.com', 'e06e2e2ff2f00cf0076710724efaa07b', 17);
 
 insert into tutors (tutor__id, tutor__subject) values
     (1, 1);

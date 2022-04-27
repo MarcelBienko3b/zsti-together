@@ -16,6 +16,7 @@
             die("Connection Failed : ". $conn->connect_error);
         } else {
             session_start();
+            $_SESSION['teacher'] = '';
             $_SESSION['student'] = $student;
             echo $_SESSION['student'];
             header("Location: ../../subpages/studentPanel.php");

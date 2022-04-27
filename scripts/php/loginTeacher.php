@@ -6,7 +6,7 @@
     $selectTeacherQuery = 'select * from teachers where teacher__email = \''.$email.'\';';
     $teacher = mysqli_fetch_array(mysqli_query($conn, $selectTeacherQuery),MYSQLI_NUM);
     
-    if ($teacher[4] == $password)
+    if ($teacher[4] == md5($password))
         $checkPassword = true;
     else 
         $checkPassword = false;
@@ -17,6 +17,7 @@
         } else {
             $_SESSION = array();
             session_start();
+            $_SESSION['student'] = '';
             $_SESSION['teacher'] = $teacher;
             echo $_SESSION['teacher'];
             header("Location: ../../subpages/teacherPanel.php");

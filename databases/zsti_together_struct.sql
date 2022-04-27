@@ -2,13 +2,23 @@ drop database if exists zsti_together_database;
 create database if not exists zsti_together_database character set utf8mb4 COLLATE utf8mb4_unicode_ci;
 use zsti_together_database;
 
+create table if not exists subjects (
+
+    subject__id int not null auto_increment primary key,
+    subject__name varchar(50) not null
+
+);
+
 create table if not exists teachers (
 
     teacher__id int not null auto_increment primary key,
     teacher__firstName varchar(50) not null,
     teacher__lastName varchar(50) not null,
     teacher__email varchar(50) not null,
-    teacher__password varchar(50) not null
+    teacher__password varchar(50) not null,
+    teacher__subject int not null,
+
+    constraint fk_teacher__subject foreign key (teacher__subject) references subjects (subject__id) on update cascade on delete restrict
 
 );
 
@@ -19,13 +29,6 @@ create table if not exists classes (
     class__teacher int not null,
 
     constraint fk_class__teacher foreign key (class__teacher) references teachers (teacher__id) on update cascade on delete cascade 
-
-);
-
-create table if not exists subjects (
-
-    subject__id int not null auto_increment primary key,
-    subject__name varchar(50) not null
 
 );
 
