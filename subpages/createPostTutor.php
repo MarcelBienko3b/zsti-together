@@ -7,7 +7,7 @@
 <body>
 
 <div class="createPost">
-    <form action="../scripts/php/sendPostStudent.php" method="post" class="post_form">
+    <form action="../scripts/php/sendPostTutor.php" method="post" class="post_form">
 
         <div class="form-group">
             <label for="description">Opis</label>

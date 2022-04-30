@@ -23,6 +23,7 @@
     <br>
     <input type="submit" id="sendNewPass" value="Zmien haslo">
 </form>
+<a href="createPostTeacher.php">Utwórz ogłoszenie</a>
 <script src="../scripts/js/passValidation.js"></script>
 </body>
 </html>
