@@ -10,6 +10,8 @@
     session_start();
     print_r($_SESSION['student']);
 ?>
+
+<a href="createPost.php">Utwórz ogłoszenie</a>
     
 </body>
 </html>
