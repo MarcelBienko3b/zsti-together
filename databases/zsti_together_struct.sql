@@ -40,6 +40,7 @@ create table if not exists students (
     student__email varchar(50) not null,
     student__password varchar(50) not null,
     student__class int not null,
+    student__isTutor bool not null default false,
 
     constraint fk_student__class foreign key (student__class) references classes (class__id) on update cascade on delete restrict
 
@@ -52,17 +53,6 @@ create table if not exists types (
 
 );
 
-create table if not exists tutors (
-
-    tutor__id int not null,
-    tutor__subject int not null,
-
-    constraint fk_tutor__id foreign key (tutor__id) references students (student__id) on update cascade on delete cascade,
-    constraint fk_tutor__subject foreign key (tutor__subject) references subjects (subject__id) on update cascade on delete cascade
-
-);
-
-
 create table if not exists posts (
 
     post__id int not null auto_increment primary key,
@@ -73,7 +63,7 @@ create table if not exists posts (
     post__type int,
 
     constraint fk_post__subject foreign key (post__subject) references subjects (subject__id) on update cascade on delete restrict,
-    constraint fk_post__tutor foreign key (post__tutor) references tutors (tutor__id) on update restrict on delete cascade,
+    constraint fk_post__tutor foreign key (post__tutor) references students (student__id) on update restrict on delete cascade,
     constraint fk_post__teacher foreign key (post__teacher) references teachers (teacher__id) on update restrict on delete cascade,
     constraint fk_post__type foreign key (post__type) references types (type__id) on update restrict on delete restrict
 
