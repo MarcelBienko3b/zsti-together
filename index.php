@@ -48,7 +48,7 @@
                                 <h4 class="subject">'.$row[1].'</h2>';
                                 if ($row[4] == null && $row[5] == null) {
                                     echo '<h4 class="tutor">'.$row[2].' '.$row[3].' | '.$row[7].'</h2>';
-                                } else {
+                                } elseif ($row[2] == null && $row[3] == null) {
                                     echo '<h4 class="teacher">'.$row[4].' '.$row[5].'</h2>';
                                 }
                             echo
