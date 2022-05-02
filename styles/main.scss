@@ -1,5 +1,9 @@
+//! @use for variables
+
 @use 'components/color-scheme.scss' as clr;
 @use 'components/fonts.scss' as font;
+
+//! @import for mixins
 
 @import 'components/navigation.scss';
 @import 'components/post-grid.scss';
