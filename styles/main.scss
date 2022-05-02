@@ -1,0 +1,92 @@
+@use 'components/color-scheme.scss' as clr;
+@use 'components/fonts.scss' as font;
+
+@import 'components/navigation.scss';
+@import 'components/post-grid.scss';
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+
+        background-color: clr.$main-bckg;
+        color: font.$main-clr;
+        font-family: font.$main-family;
+
+        .navbar {
+
+            display: flex;
+            padding: 0 10px;
+            flex-direction: row-reverse;
+
+            &__item {
+
+                display: inline-block;
+                background-color: clr.$secondary-bckg;
+                @include nav-button;
+              
+                & a {
+                    
+                    color: font.$secondary-clr;
+
+                }
+
+            }
+
+        }
+
+        .posts-container {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+
+            .post {
+
+                flex-basis: 80%;
+                margin: 10px auto 10px auto;
+                padding: 10px;
+                border: 1px solid clr.$main-accent;
+
+                display: grid;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
+                
+                @include grid-base;
+
+                &__author {
+
+                    grid-area: author;
+                    font-size: font.$medium-size;
+
+                }
+
+                &__subject {
+
+                    grid-area: subject;
+
+                }
+
+                &__description {
+
+                    grid-area: desc;
+
+                }
+
+                &__type {
+
+                    grid-area: type;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
