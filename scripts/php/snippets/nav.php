@@ -4,8 +4,10 @@
         
     function logged() {
 
-        if ($_SESSION['student'] != '' || $_SESSION['teacher'] != '') {
-           return true;
+        if (isset($_SESSION['student']) || isset($_SESSION['teacher'])) {
+            if ($_SESSION['student'] != '' || $_SESSION['teacher'] != '') {
+            return true;
+            } else return false;
         } else return false;
 
     }
@@ -13,47 +15,37 @@
     if (!logged()) {
 
         echo '
-            <nav class="navbar navbar--horizontal">
+            <nav class="navbar navbar--vertical">
                 <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="register.php">Zarejestruj się</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="loginStudent.php">Zaloguj się jako uczeń</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="loginTeacher.php">Zaloguj się jako nauczyciel</a>
-                    </li>
+                    <button class="navbar__close"><< Zamknij panel</button>
+                    <a class="navbar__item" href="register.php">Zarejestruj się</a>
+                    <a class="navbar__item" href="loginStudent.php">Zaloguj się jako uczeń</a>
+                    <a class="navbar__item" href="loginTeacher.php">Zaloguj się jako nauczyciel</a>
                 </ul>
             </nav>';
 
     } else {
 
-            echo '
-            <nav class="navbar navbar--horizontal">
+        echo '
+            <nav class="navbar navbar--vertical>
                 <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="scripts/php/logout.php">Wyloguj się</a>
-                    </li>';
+                    <button class="navbar__close"><< Zamknij panel</button>';
+
         if ($_SESSION['student'] != null) {
 
             echo '
-                    <li class="navbar__item">
-                        <a href="studentPanel.php">Przejdź do panelu zarządzania</a>
-                    </li>
-                </ul>
-            </nav>';
+                    <a class="navbar__item" href="studentPanel.php">Przejdź do panelu zarządzania</a>';
 
         } elseif ($_SESSION['teacher'] != null) {
 
             echo '
-                    <li class="navbar__item">
-                        <a href="teacherPanel.php">Przejdź do panelu zarządzania</a>
-                    </li>
+                    <a class="navbar__item" href="teacherPanel.php">Przejdź do panelu zarządzania</a>';
+
+        }
+        echo '
+                    <a class="navbar__item" href="scripts/php/logout.php">Wyloguj się</a>
                 </ul>
             </nav>';
-                        
-        }
 
     }
 

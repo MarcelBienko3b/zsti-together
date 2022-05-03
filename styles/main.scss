@@ -5,8 +5,8 @@
 
 //! @import for mixins
 
-@import 'components/navigation.scss';
-@import 'components/post-grid.scss';
+@import 'components/buttons.scss';
+@import 'components/grids.scss';
 
 * {
 
@@ -22,15 +22,18 @@
 
         .navbar {
 
-            display: flex;
+            position: fixed;
             padding: 0 10px;
-            flex-direction: row-reverse;
+            width: 20%;
+            height: 100vh;
+
+            background-color: clr.$tetriary-bckg;
 
             &__item {
 
-                display: inline-block;
+                display: block;
                 background-color: clr.$secondary-bckg;
-                @include nav-button;
+                @include button;
               
                 & a {
                     
@@ -44,23 +47,21 @@
 
         .posts-container {
 
+            margin: auto auto auto 20%;
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
-            width: 100%;
 
             .post {
 
-                flex-basis: 80%;
+                flex-basis: 40%;
+                gap: 0.5em;
+                min-width: 400px;
+
                 margin: 10px auto 10px auto;
                 padding: 10px;
                 border: 1px solid clr.$main-accent;
-
-                display: grid;
-                grid-column-gap: 0;
-                grid-row-gap: 0;
                 
-                @include grid-base;
+                @include post-grid-base;
 
                 &__author {
 

@@ -1,4 +1,8 @@
-@mixin grid-base {
+@mixin post-grid-base {
+
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
 
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
