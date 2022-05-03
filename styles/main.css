@@ -9,14 +9,13 @@
   font-family: Lato;
 }
 * body .navbar {
-  position: fixed;
-  padding: 0 10px;
-  width: 20%;
-  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
   background-color: #000000;
 }
 * body .navbar__item {
-  display: block;
+  display: inline-block;
   background-color: #FFFFFF;
   padding: 10px 20px;
   border-radius: 10px;
@@ -26,7 +25,7 @@
   color: #000000;
 }
 * body .posts-container {
-  margin: auto auto auto 20%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }

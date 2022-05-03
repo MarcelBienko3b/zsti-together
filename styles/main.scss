@@ -5,8 +5,8 @@
 
 //! @import for mixins
 
-@import 'components/buttons.scss';
 @import 'components/grids.scss';
+@import 'components/nav';
 
 * {
 
@@ -20,34 +20,11 @@
         color: font.$main-clr;
         font-family: font.$main-family;
 
-        .navbar {
-
-            position: fixed;
-            padding: 0 10px;
-            width: 20%;
-            height: 100vh;
-
-            background-color: clr.$tetriary-bckg;
-
-            &__item {
-
-                display: block;
-                background-color: clr.$secondary-bckg;
-                @include button;
-              
-                & a {
-                    
-                    color: font.$secondary-clr;
-
-                }
-
-            }
-
-        }
+        @include navbar;
 
         .posts-container {
 
-            margin: auto auto auto 20%;
+            margin: auto;
             display: flex;
             flex-wrap: wrap;
 

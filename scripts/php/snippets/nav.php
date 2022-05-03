@@ -15,9 +15,8 @@
     if (!logged()) {
 
         echo '
-            <nav class="navbar navbar--vertical">
+            <nav class="navbar navbar--horizontal">
                 <ul class="navbar__list">
-                    <button class="navbar__close"><< Zamknij panel</button>
                     <a class="navbar__item" href="register.php">Zarejestruj się</a>
                     <a class="navbar__item" href="loginStudent.php">Zaloguj się jako uczeń</a>
                     <a class="navbar__item" href="loginTeacher.php">Zaloguj się jako nauczyciel</a>
@@ -27,9 +26,8 @@
     } else {
 
         echo '
-            <nav class="navbar navbar--vertical>
-                <ul class="navbar__list">
-                    <button class="navbar__close"><< Zamknij panel</button>';
+            <nav class="navbar navbar--horizontal>
+                <ul class="navbar__list">';
 
         if ($_SESSION['student'] != null) {
 

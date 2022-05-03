@@ -1,0 +1,29 @@
+@import 'buttons.scss';
+
+@mixin navbar {
+
+    .navbar {
+
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+
+        background-color: clr.$tetriary-bckg;
+
+        &__item {
+
+            display: inline-block;
+            background-color: clr.$secondary-bckg;
+            @include button;
+        
+            & a {
+                
+                color: font.$secondary-clr;
+
+            }
+
+        }
+
+    }
+
+}
