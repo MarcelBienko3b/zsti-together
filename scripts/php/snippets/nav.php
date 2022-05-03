@@ -34,12 +34,12 @@
         if ($_SESSION['student'] != null) {
 
             echo '
-                    <a class="navbar__item" href="studentPanel.php">Przejdź do panelu zarządzania</a>';
+                    <a class="navbar__item" href="subpages/studentPanel.php">Przejdź do panelu zarządzania</a>';
 
         } elseif ($_SESSION['teacher'] != null) {
 
             echo '
-                    <a class="navbar__item" href="teacherPanel.php">Przejdź do panelu zarządzania</a>';
+                    <a class="navbar__item" href="subpages/teacherPanel.php">Przejdź do panelu zarządzania</a>';
 
         }
         echo '
