@@ -46,7 +46,8 @@ insert into classes (class__name, class__teacher) values
 
 insert into types (type__name) values
     ('kolko dodatkowe'),
-    ('pomoc kolezenska');
+    ('pomoc kolezenska'),
+    ('kolko wyrownawcze');
 
 insert into students (student__firstName, student__lastName, student__email, student__password, student__class, student__isTutor) values 
     ('Jurek', 'Ciurek', 'jo@gmail.com', 'e06e2e2ff2f00cf0076710724efaa07b', 17, 0),

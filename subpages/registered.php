@@ -28,10 +28,8 @@
             }
 
         }
-        print_r($students);
-        mysqli_close($db_login);
-
-        echo '<br>';
+        
+        header('Location: ../index.php');
 
     ?>
     
