@@ -7,18 +7,19 @@
         display: flex;
         flex-direction: row-reverse;
         width: 100%;
+        gap: 0.5em;
 
-        background-color: clr.$tetriary-bckg;
+        background-color: clr.$bckg-tetriary;
 
         &__item {
 
             display: inline-block;
-            background-color: clr.$secondary-bckg;
+            background-color: clr.$accent-tetriary;
             @include button;
         
             & a {
                 
-                color: font.$secondary-clr;
+                color: clr.$font-secondary;
 
             }
 

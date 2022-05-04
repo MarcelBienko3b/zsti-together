@@ -1,23 +1,23 @@
 //! @use for variables
 
-@use 'components/color-scheme.scss' as clr;
+@use 'components/colors.scss' as clr;
 @use 'components/fonts.scss' as font;
 
 //! @import for mixins
 
+@import 'components/color-scheme.scss';
 @import 'components/grids.scss';
-@import 'components/nav';
+@import 'components/nav.scss';
+@import 'components/reset.scss';
 
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @include reset;
 
     body {
 
-        background-color: clr.$main-bckg;
-        color: font.$main-clr;
+        @include primary-color-set;
+
         font-family: font.$main-family;
 
         @include navbar;
@@ -36,7 +36,7 @@
 
                 margin: 10px auto 10px auto;
                 padding: 10px;
-                border: 1px solid clr.$main-accent;
+                border: 1px solid;
                 
                 @include post-grid-base;
 

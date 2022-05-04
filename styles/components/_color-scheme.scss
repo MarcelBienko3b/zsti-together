@@ -1,9 +1,23 @@
-//* background colors
+@mixin primary-color-set {
 
-$main-bckg: #585858;
-$secondary-bckg: #FFFFFF;
-$tetriary-bckg: #000000;
+    background-color: clr.$bckg-primary;
+    color: clr.$font-primary;
+    border-color: clr.$accent-secondary;
 
-//* accent colors
+}
 
-$main-accent: #FFFFFF;
+@mixin secondary-color-set {
+
+    background-color: clr.$bckg-secondary;
+    color: clr.$font-primary;
+    border-color: clr.$accent-tetriary;
+
+}
+
+@mixin tetriary-color-set {
+
+    background-color: clr.$bckg-tetriary;
+    color: clr.$font-secondary;
+    border-color: clr.$accent-primary;
+
+}
