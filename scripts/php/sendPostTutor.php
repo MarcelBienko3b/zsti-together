@@ -3,7 +3,7 @@
     $description = $_POST['description'];
     $subject = $_POST['subject'];
     $types = $_POST['type'];
-    $student = $_SESSION['student'];
+    $student = $_SESSION['student'][0];
     // Database connection
     $conn = new mysqli('localhost','root','','zsti_together_database');
     if($conn->connect_error){
