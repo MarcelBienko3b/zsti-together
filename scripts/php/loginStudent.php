@@ -19,7 +19,7 @@
             $_SESSION['teacher'] = '';
             $_SESSION['student'] = $student;
             echo $_SESSION['student'];
-            header("Location: ../../index.php");
+            header("Location: ../../posts.php");
             exit();
         }
     } else {

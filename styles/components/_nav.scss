@@ -11,6 +11,13 @@
 
         background-color: clr.$bckg-tetriary;
 
+        &__list {
+
+            display: flex;
+            flex-direction: row-reverse;
+
+        }
+
         &__item {
 
             background-color: clr.$accent-tetriary;

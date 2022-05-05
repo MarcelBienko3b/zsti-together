@@ -1,0 +1,36 @@
+//! @use for variables
+
+@use '../../components/colors' as clr;
+@use '../../components/fonts' as font;
+
+//! @import for mixins
+
+@import '../../components/reset';
+@import '../../components/post';
+@import '../../components/nav';
+
+* {
+
+    @include reset;
+
+    body {
+
+        background-color: clr.$bckg-primary;
+
+        font-family: font.$primary-family;
+
+        @include navbar;
+
+        .posts-container {
+
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include post;
+
+        }
+
+    }
+
+}

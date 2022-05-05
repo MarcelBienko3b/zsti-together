@@ -1,11 +1,11 @@
 //! @use for variables
 
-@use 'components/colors.scss' as clr;
-@use 'components/fonts.scss' as font;
+@use '../../components/colors.scss' as clr;
+@use '../../components/fonts.scss' as font;
 
 //! @import for mixins
 
-@import 'components/reset.scss';
+@import '../../components/reset.scss';
 
 * {
     

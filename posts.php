@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Student panel</title>
-    <link rel="stylesheet" href="../styles/pages/panel/panel.css">
-</head>
-<body>
-<?php require '../scripts/php/snippets/nav.php' ?>
-<?php
-    print_r($_SESSION['student']);
-?>
-<div class="container">
-    <ul class="student-panel-menu">
-        <li id="myAcc">Moje konto</li>
-        <li id="myPosts">Moje posty</li>
-    </ul>
-    <div class="panel-content" style="flex-basis:66%">
-    <div class="myAcc">
-    <p>Witam</p></div>  
-    <div class="myPosts">
-        <?php 
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>ZSTI Together</title>
+
+        <link rel="stylesheet" href="styles/pages/posts/posts.css">
+        
+    </head>
+
+    <body>
+
+        <?php require 'scripts/php/snippets/nav.php' ?>
+
+        <?php
+        
             $conn = new mysqli('localhost','root','','zsti_together_database');
 
             $postsQuery = '
-                call getPostsForUser('.$_SESSION['student'][0].');';
+                    select 
+                        posts.post__body,
+                        subjects.subject__name,
+                        students.student__firstName,
+                        students.student__lastName,
+                        teachers.teacher__firstName,
+                        teachers.teacher__lastName,
+                        types.type__name,
+                        classes.class__name
+                    from posts 
+                    inner join subjects on subjects.subject__id = posts.post__subject
+                    left join students on students.student__id = posts.post__tutor
+                    left join teachers on teachers.teacher__id = posts.post__teacher
+                    inner join types on types.type__id = posts.post__type
+                    left join classes on classes.class__id = students.student__class
+                    ';
             
             $result = $conn->query($postsQuery);
+
             echo '<br>';
 
             if ($result->num_rows > 0) {
@@ -51,29 +63,9 @@
                 }
                 echo '</div>';
             }
+
         ?>
-    <a href="createPostTutor.php">Utwórz ogłoszenie</a>
-    </div>
-</div>
 
+    </body>
 
-<script>
-    const myAcc = document.getElementsByClassName("myAcc")[0];
-    const myPosts = document.getElementsByClassName("myPosts")[0];
-    myPosts.classList.add("hidden");
-    function setAcc() {
-        myPosts.classList.add("hidden");
-        myAcc.classList.remove("hidden");
-    }
-    function setPosts() {
-        myPosts.classList.remove("hidden");
-        myAcc.classList.add("hidden");
-    }
-    const myAccBtn = document.getElementById('myAcc');
-    const myPostsBtn = document.getElementById('myPosts');
-    myAccBtn.addEventListener("click", setAcc);
-    myPostsBtn.addEventListener("click", setPosts);
-    
-</script>
-</body>
 </html>

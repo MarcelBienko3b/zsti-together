@@ -1,13 +1,13 @@
 //! @use for variables
 
-@use 'components/colors' as clr;
-@use 'components/fonts' as font;
+@use '../../components/colors' as clr;
+@use '../../components/fonts' as font;
 
 //! @import for mixins
 
-@import 'components/reset';
-@import 'components/post';
-@import 'components/nav';
+@import '../../components/reset';
+@import '../../components/post';
+@import '../../components/nav';
 
 * {
 

@@ -26,7 +26,7 @@
     } else {
 
         echo '
-            <nav class="navbar navbar--horizontal>
+            <nav class="navbar navbar--horizontal">
                 <ul class="navbar__list">
                     <a class="navbar__item" href="scripts/php/logout.php">Wyloguj się</a>
                     <a class="navbar__item" href="scripts/php/displayNotifications.php"><img src="images/icons/notification_bell.png"</a>';

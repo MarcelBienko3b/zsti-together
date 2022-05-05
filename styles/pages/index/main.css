@@ -16,6 +16,10 @@
   gap: 0.5em;
   background-color: #002165;
 }
+* body .navbar__list {
+  display: flex;
+  flex-direction: row-reverse;
+}
 * body .navbar__item {
   background-color: #e5e5e5;
   display: grid;
