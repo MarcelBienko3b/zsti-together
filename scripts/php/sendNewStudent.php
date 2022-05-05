@@ -30,4 +30,5 @@
     } else {
         echo 'Twoje hasła się różnią';
     }
+
 ?>

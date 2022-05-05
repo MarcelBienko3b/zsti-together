@@ -28,7 +28,7 @@
             }
 
         }
-        
+
         header('Location: ../posts.php');
 
     ?>

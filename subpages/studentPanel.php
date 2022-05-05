@@ -33,7 +33,7 @@
                 while ($rows = $result->fetch_all()) {
                     foreach ($rows as $row) {
                         echo 
-                            '<div class="posts-container__post post">';
+                            '<div class="posts-container__post post post--wide">';
                                 if ($row[4] == null && $row[5] == null) {
                                     echo '<h4 class="post__author">'.$row[2].' '.$row[3].' | '.$row[7].'</h2>';
                                 } elseif ($row[2] == null && $row[3] == null) {

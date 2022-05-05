@@ -54,6 +54,9 @@
   padding: 10px;
   border: 1px solid;
 }
+* body .posts-container .post--wide {
+  flex-basis: 80%;
+}
 * body .posts-container .post__author {
   grid-area: author;
   font-size: 18px;

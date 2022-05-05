@@ -1,11 +1,13 @@
 //! @use for variables
 
-@use '../../components/colors.scss' as clr;
-@use '../../components/fonts.scss' as font;
+@use '../../components/colors' as clr;
+@use '../../components/fonts' as font;
 
 //! @import for mixins
 
-@import '../../components/reset.scss';
+@import '../../components/reset';
+@import '../../components/post';
+@import '../../components/nav';
 
 * {
     
@@ -13,30 +15,60 @@
 
     body {
 
+        background-color: clr.$bckg-primary;
         font-family: font.$primary-family;
 
+        @include navbar;
+
         .container {
+            
             display:flex;
             flex-direction:row;
+
         }
+
         .student-panel-menu {
+
             list-style-type: none;
             display:flex;
             flex-direction:column;
             flex-wrap:wrap;
             flex-basis:30%;
+
             li {
+
                 background-color:gray;
+
             }
+
             li:hover {
+
                 background-color:blue;
+
             }
+
         }
+
         .container .panel-content {
+
             flex-basis:66%;
+
         }
+
         .hidden {
+
             display:none !important;
+
+        }
+
+        .posts-container {
+
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include post;
+
         }
     }
 
