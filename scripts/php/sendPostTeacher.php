@@ -16,6 +16,7 @@
         $stmt->close();
         $conn->close();
 
+        header("Location: ../../subpages/teacherPanel.php");
         exit();
     }
 ?>

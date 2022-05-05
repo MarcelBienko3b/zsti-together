@@ -1,14 +1,13 @@
 //! @use for variables
 
-@use 'components/colors.scss' as clr;
-@use 'components/fonts.scss' as font;
+@use 'components/colors' as clr;
+@use 'components/fonts' as font;
 
 //! @import for mixins
 
-@import '/components/color-scheme.scss';
-@import 'components/grids.scss';
-@import 'components/nav.scss';
-@import 'components/reset.scss';
+@import 'components/reset';
+@import 'components/post';
+@import 'components/nav';
 
 * {
 
@@ -16,9 +15,9 @@
 
     body {
 
-        @include primary-color-set;
+        background-color: clr.$bckg-primary;
 
-        font-family: font.$main-family;
+        font-family: font.$primary-family;
 
         @include navbar;
 
@@ -28,44 +27,7 @@
             display: flex;
             flex-wrap: wrap;
 
-            .post {
-
-                flex-basis: 40%;
-                gap: 0.5em;
-                min-width: 400px;
-
-                margin: 10px auto 10px auto;
-                padding: 10px;
-                border: 1px solid;
-                
-                @include post-grid-base;
-
-                &__author {
-
-                    grid-area: author;
-                    font-size: font.$medium-size;
-
-                }
-
-                &__subject {
-
-                    grid-area: subject;
-
-                }
-
-                &__description {
-
-                    grid-area: desc;
-
-                }
-
-                &__type {
-
-                    grid-area: type;
-
-                }
-
-            }
+            @include post;
 
         }
 

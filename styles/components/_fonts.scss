@@ -1,12 +1,16 @@
 //* font families
 
-$main-family: Lato;
+$primary-family: Lato;
+$secondary-family: Consolas, monospace;
 
 //* font sizes
 
-$medium-size: 18px;
 $small-size: 12px;
+$medium-size: 18px;
+$big-size: 24px;
 
 //* font weights
 
+$thin-weight: 100;
 $medium-weight: normal;
+$bold-weight: bold;

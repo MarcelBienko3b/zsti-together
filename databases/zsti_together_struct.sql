@@ -80,7 +80,7 @@ create table if not exists requests (
     constraint fk_request__student foreign key (request__student) references students (student__id) on update restrict on delete restrict
 
 );
-*/
+
 CREATE PROCEDURE getPostsForUser
 (IN curr_Id int)
 select 

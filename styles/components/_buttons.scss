@@ -1,23 +1,17 @@
-@mixin button {
+@mixin buttons {
 
+    display: grid;
+    margin: 10px 2px;
     padding: 10px 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+    place-items: center;
+    border-radius: 5px;
 
-    display: flex;
-    align-items: center;
+    background-color: clr.$bckg-primary;
 
     &:hover {
 
-        @include hover;
-        
+        background-color: clr.$bckg-secondary;
+
     }
-    
-}
-
-@mixin hover {
-
-    background-color: clr.$accent-primary;
-    color: clr.$font-primary;
 
 }

@@ -1,4 +1,4 @@
-@import 'buttons.scss';
+@import 'buttons';
 
 @mixin navbar {
 
@@ -13,9 +13,9 @@
 
         &__item {
 
-            display: inline-block;
             background-color: clr.$accent-tetriary;
-            @include button;
+            
+            @include buttons;
         
             & a {
                 
