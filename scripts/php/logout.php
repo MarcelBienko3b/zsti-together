@@ -5,6 +5,6 @@
     $_SESSION['student'] = '';
     $_SESSION['teacher'] = '';
 
-    header('Location: ../../index.php');
+    header('Location: /index.html');
 
 ?>

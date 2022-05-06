@@ -6,27 +6,52 @@
 //! @import for mixins
 
 @import '../../components/reset';
-@import '../../components/post';
-@import '../../components/nav';
+@import '../../components/animations';
 
 * {
 
     @include reset;
+    @include transition;
 
     body {
 
         background-color: clr.$bckg-primary;
         font-family: font.$primary-family;
+        font-size: font.$xxl;
 
-        @include navbar;
+        display: grid;
+        height: 100vh;
+        place-items: center;
 
-        .posts-container {
+        .log-container {
 
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
+            &__list {
 
-            @include post;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 1.5em;
+
+                text-align: center;
+
+            }
+
+            &__item {
+
+                padding: 1em 5em;
+                border-radius: 10px;
+                background-color: clr.$bckg-secondary;
+                box-shadow: 10px 10px clr.$bckg-tetriary;
+
+                &:hover {
+
+                    background-color: clr.$bckg-tetriary;
+                    color: clr.$accent-tetriary;
+                    box-shadow: 10px 10px clr.$accent-primary;
+
+                }
+
+            }
 
         }
 

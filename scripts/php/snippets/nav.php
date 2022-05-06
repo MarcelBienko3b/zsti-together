@@ -13,22 +13,15 @@
     }
 
     if (!logged()) {
-
-        echo '
-            <nav class="navbar navbar--horizontal">
-                <ul class="navbar__list">
-                    <a class="navbar__item" href="register.php">Zarejestruj się</a>
-                    <a class="navbar__item" href="loginStudent.php">Zaloguj się jako uczeń</a>
-                    <a class="navbar__item" href="loginTeacher.php">Zaloguj się jako nauczyciel</a>
-                </ul>
-            </nav>';
+        
+        header('Location: index.html');
 
     } else {
 
         echo '
             <nav class="navbar navbar--horizontal">
                 <ul class="navbar__list">
-                    <a class="navbar__item" href="/scripts/php/logout.php">Wyloguj się</a>
+                    <a class="navbar__item" href="scripts/php/logout.php">Wyloguj się</a>
                     <a class="navbar__item" href="scripts/php/displayNotifications.php"><img src="/images/icons/notification_bell.png"</a>';
 
         if ($_SESSION['student'] != null) {

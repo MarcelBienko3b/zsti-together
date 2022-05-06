@@ -8,10 +8,12 @@
 @import '../../components/reset';
 @import '../../components/post';
 @import '../../components/nav';
+@import '../../components/animations';
 
 * {
 
     @include reset;
+    @include transition;
 
     body {
 
