@@ -13,43 +13,51 @@
         <li id="myPosts">Moje posty</li>
     </ul>
     <div class="panel-content">
-    <div class="myAcc">
-    <p>Witam</p></div>  
-    <div class="myPosts">
-    <a href="createPostTutor.php">Utwórz ogłoszenie</a>
-        <?php 
-            $conn = new mysqli('localhost','root','','zsti_together_database');
 
-            $postsQuery = '
-                call getPostsForUser('.$_SESSION['student'][0].');';
-            
-            $result = $conn->query($postsQuery);
-            echo '<br>';
+        <div class="myAcc">
+            <p>Witam</p>
+        </div>  
+        
+        <div class="myPosts">
 
-            if ($result->num_rows > 0) {
-                echo '<div class="posts-container">';
-                while ($rows = $result->fetch_all()) {
-                    foreach ($rows as $row) {
-                        echo 
-                            '<div class="posts-container__post post post--wide">';
+            <a href="createPostTutor.php">Utwórz ogłoszenie</a>
+
+            <?php 
+                $conn = new mysqli('localhost','root','','zsti_together_database');
+
+                $postsQuery = '
+                    call getPostsForUser('.$_SESSION['student'][0].');';
+                    
+                $result = $conn->query($postsQuery);
+                echo '<br>';
+
+                if ($result->num_rows > 0) {
+                    echo '<div class="posts-container">';
+                    while ($rows = $result->fetch_all()) {
+                        foreach ($rows as $row) {
+                            echo 
+                                '<div class="posts-container__post post post--wide">';
                                 if ($row[4] == null && $row[5] == null) {
-                                    echo '<h4 class="post__author">'.$row[2].' '.$row[3].' | '.$row[7].'</h2>';
+                                    echo '
+                                    <h4 class="post__author">'.$row[2].' '.$row[3].' | '.$row[7].'</h4>';
                                 } elseif ($row[2] == null && $row[3] == null) {
-                                    echo '<h4 class="post__author">'.$row[4].' '.$row[5].'</h2>';
+                                    echo '
+                                    <h4 class="post__author">'.$row[4].' '.$row[5].'</h4>';
                                 }
-                            echo
-                                '<h3 class="post__description">'.$row[0].'</h3>
-                                <h4 class="post__subject">'.$row[1].'</h2>';
-                                
-                            echo
-                                '<p class="post__type">'.$row[6].'</p>
-                            </div>';
-                        echo '<br>';
+                                echo '
+                                    <h3 class="post__description">'.$row[0].'</h3>
+                                    <h4 class="post__subject">'.$row[1].'</h4>
+                                    <p class="post__type">'.$row[6].'</p>
+                                </div>';
+                            echo '<br>';
+                        }
                     }
+                    echo '</div>';
                 }
-                echo '</div>';
-            }
-        ?>
+            ?>
+
+        </div>
+
     </div>
 </div>
 
