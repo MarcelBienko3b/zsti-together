@@ -9,6 +9,7 @@
 * body {
   background-color: #e5e5e5;
   font-family: Lato;
+  overflow: hidden;
 }
 * body .navbar {
   display: flex;
@@ -39,22 +40,51 @@
 * body .container {
   display: flex;
   flex-direction: row;
+  height: 90vh;
+  margin: 1em auto;
 }
 * body .student-panel-menu {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex-basis: 30%;
+  flex-basis: 15%;
 }
 * body .student-panel-menu li {
-  background-color: gray;
+  width: 80%;
+  display: grid;
+  place-items: center;
+  background-color: #f9b522;
+  color: #002165;
+  height: 2.5em;
 }
 * body .student-panel-menu li:hover {
-  background-color: blue;
+  width: 100%;
+  background-color: #002165;
+  color: #e5e5e5;
+  cursor: pointer;
 }
-* body .container .panel-content {
-  flex-basis: 66%;
+* body .panel-content {
+  flex-basis: 85%;
+  overflow-y: scroll;
+  padding: 0 2em;
+}
+* body .panel-content a {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  border: 1px solid #002165;
+  background-color: #f9b522;
+  width: 12em;
+  padding: 0.6em;
+  margin: 1em 0 0 0;
+  color: #002165;
+}
+* body .panel-content a:hover {
+  background-color: #002165;
+  box-shadow: 0 0 10px #002165;
+  color: #e5e5e5;
 }
 * body .hidden {
   display: none !important;
@@ -79,7 +109,7 @@
   border: 1px solid;
 }
 * body .posts-container .post--wide {
-  flex-basis: 80%;
+  flex-basis: 60%;
 }
 * body .posts-container .post__author {
   grid-area: author;

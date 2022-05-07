@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Nowe ogłoszenie</title>
+
+    <link rel="stylesheet" href="/styles/pages/forms/newPost.css">
 </head>
 <body>
 
 <div class="createPost">
-    <form action="../scripts/php/sendPostTutor.php" method="post" class="post_form">
+    <form action="../scripts/php/sendPostTutor.php" method="post" class="post_form form">
 
-        <div class="form-group">
-            <label for="description">Opis</label>
+        <div class="form__description item">
+            <label for="description">Opis</label><br>
             <textarea type="textarea" class="form-control" id="description" name="description"></textarea>
         </div>
 
-        <div class="form-group">
+        <div class="form__subject item">
 
-            <label for="subject">Przedmiot</label>
+            <label for="subject">Przedmiot</label><br>
             <select id="subject" name="subject">
 
             <?php
@@ -39,9 +41,9 @@
 
         </div>
 
-        <div class="form-group">
+        <div class="form__class item">
 
-            <label for="type">Typ zajęć</label>
+            <label for="type">Typ zajęć</label><br>
             <select id="type" name="type">
 
             <?php
@@ -64,7 +66,7 @@
 
         </div>
 
-        <input type="submit" class="btn btn-primary" />
+        <input type="submit" class="form__btn item" />
     </form>
 </div>
     

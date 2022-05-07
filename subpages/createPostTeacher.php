@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Nowe ogłoszenie</title>
+
+    <link rel="stylesheet" href="/styles/pages/forms/newPost.css">
 </head>
 <body>
 

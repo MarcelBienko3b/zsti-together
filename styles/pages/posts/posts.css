@@ -56,7 +56,7 @@
   border: 1px solid;
 }
 * body .posts-container .post--wide {
-  flex-basis: 80%;
+  flex-basis: 60%;
 }
 * body .posts-container .post__author {
   grid-area: author;

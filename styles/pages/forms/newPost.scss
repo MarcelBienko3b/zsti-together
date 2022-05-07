@@ -1,0 +1,124 @@
+//! @use for variables
+
+@use '../../components/colors' as clr;
+@use '../../components/fonts' as font;
+
+//! @import for mixins
+
+@import '../../components/reset';
+@import '../../components/animations';
+
+
+* {
+
+    @include reset;
+    @include transition;
+
+    body {
+
+        background-color: clr.$bckg-primary;
+        font-family: font.$primary-family;
+        color: clr.$font-primary;
+
+        display: grid;
+        height: 100vh;
+        place-items: center;
+
+        .createPost {
+
+            background-color: clr.$bckg-secondary;
+            padding: 3em 5em;
+            border-radius: 10px;
+            box-shadow: 10px 10px clr.$accent-secondary;
+
+            .form {
+
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    "description description"
+                    "subject type"
+                    ". submit";
+                
+                gap: 1em 3em;
+
+                .item {
+
+                    appearance: none;
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+
+                }
+
+                select {
+
+                    border: 2px solid clr.$bckg-tetriary;
+                    border-radius: 10px;
+                    padding: 0.5em;
+                    width: 80%;
+
+                }
+
+                input[type="submit"] {
+
+                    background-color: clr.$bckg-secondary;
+                    border: 1px solid clr.$accent-secondary;
+                    border-radius: 5px;
+                    height: 40%;
+                    width: 40%;
+                    margin: auto 0 auto auto;
+
+                    &:hover {
+
+                        box-shadow: 0 0 5px clr.$accent-secondary;
+                        background-color: clr.$accent-secondary;
+                        color: clr.$font-secondary;
+                        cursor: pointer;
+
+                    }
+
+                }
+
+                textarea[type="textarea"] {
+
+                    min-width: 600px;
+                    min-height: 80px;
+                    border-radius: 5px;
+                    padding: 0.5em;
+
+                }
+
+                &__description {
+
+                    grid-area: description;
+
+                }
+
+                &__subject {
+
+                    grid-area: subject;
+
+                }
+
+                &__type {
+
+                    grid-area: type;
+
+                }
+
+                &__btn {
+
+                    grid-area: submit;
+
+                }
+                
+            }
+
+        }
+
+    }
+
+}

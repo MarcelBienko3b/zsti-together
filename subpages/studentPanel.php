@@ -7,18 +7,16 @@
 </head>
 <body>
 <?php require '../scripts/php/snippets/nav.php' ?>
-<?php
-    print_r($_SESSION['student']);
-?>
 <div class="container">
     <ul class="student-panel-menu">
         <li id="myAcc">Moje konto</li>
         <li id="myPosts">Moje posty</li>
     </ul>
-    <div class="panel-content" style="flex-basis:66%">
+    <div class="panel-content">
     <div class="myAcc">
     <p>Witam</p></div>  
     <div class="myPosts">
+    <a href="createPostTutor.php">Utwórz ogłoszenie</a>
         <?php 
             $conn = new mysqli('localhost','root','','zsti_together_database');
 
@@ -52,7 +50,6 @@
                 echo '</div>';
             }
         ?>
-    <a href="createPostTutor.php">Utwórz ogłoszenie</a>
     </div>
 </div>
 

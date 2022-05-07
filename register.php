@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <title>ZSTI Emergency</title>
 
-        <link rel="stylesheet" href="styles/pages/loginRegister/register.css">
+        <link rel="stylesheet" href="styles/pages/forms/register.css">
         
     </head>
 
