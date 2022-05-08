@@ -53,7 +53,10 @@
   min-width: 400px;
   margin: 10px auto 10px auto;
   padding: 10px;
-  border: 1px solid;
+  border-radius: 5px;
+  background-color: #f9b522;
+  border: 1px solid #002165;
+  box-shadow: 5px 5px #002165;
 }
 * body .posts-container .post--wide {
   flex-basis: 60%;

@@ -21,7 +21,10 @@
         
         margin: 10px auto 10px auto;
         padding: 10px;
-        border: 1px solid;
+        border-radius: 5px;
+        background-color: clr.$bckg-secondary;
+        border: 1px solid clr.$accent-secondary;
+        box-shadow: 5px 5px clr.$bckg-tetriary;
 
         &--wide {
             flex-basis: 60%;
