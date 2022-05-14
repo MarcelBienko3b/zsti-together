@@ -30,7 +30,8 @@
                         teachers.teacher__firstName,
                         teachers.teacher__lastName,
                         types.type__name,
-                        classes.class__name
+                        classes.class__name,
+                        posts.post__id
                     from posts 
                     inner join subjects on subjects.subject__id = posts.post__subject
                     left join students on students.student__id = posts.post__tutor
@@ -55,13 +56,15 @@
                                     echo '<h4 class="post__author">'.$row[4].' '.$row[5].'</h2>';
                                 }
                             echo
-                                '<h3 class="post__description">'.$row[0].'</h3>
+                                '<hr class="post__hr">
+                                <h3 class="post__description">'.$row[0].'</h3>
+                                <hr class="post__hr">
                                 <h4 class="post__subject">'.$row[1].'</h2>';
                                 
                             echo
                                 '<p class="post__type">'.$row[6].'</p>
+                                <button class="post__more" id="post_'.$row[8].'">Przejdź do ogłoszenia</button>
                             </div>';
-                        echo '<br>';
                     }
                 }
                 echo '</div>';

@@ -23,6 +23,7 @@
 }
 * body .navbar__item {
   background-color: #e5e5e5;
+  color: #002165;
   display: grid;
   margin: 10px 2px;
   padding: 10px 20px;
@@ -32,9 +33,6 @@
 }
 * body .navbar__item:hover {
   background-color: #f9b522;
-}
-* body .navbar__item a {
-  color: #e5e5e5;
 }
 * body .posts-container {
   margin: auto;
@@ -46,8 +44,8 @@
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "author author . subject subject" "desc desc desc desc desc" "desc desc desc desc desc" ". . . type type";
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "author author . subject subject" "hrf hrf hrf hrf hrf" "desc desc desc desc desc" "desc desc desc desc desc" "hrl hrl hrl hrl hrl" "type type . . more";
   flex-basis: 40%;
   gap: 0.5em;
   min-width: 400px;
@@ -65,12 +63,34 @@
   grid-area: author;
   font-size: 18px;
 }
+* body .posts-container .post__hr:first-of-type {
+  grid-area: hrf;
+  height: 1px;
+  margin: 0 20px;
+  background-color: #002165;
+  border: none;
+}
+* body .posts-container .post__hr:last-of-type {
+  grid-area: hrl;
+  height: 1px;
+  margin: 0 20px;
+  background-color: #002165;
+  border: none;
+}
 * body .posts-container .post__subject {
   grid-area: subject;
+  text-transform: uppercase;
 }
 * body .posts-container .post__description {
   grid-area: desc;
+  padding: 0 20px;
+}
+* body .posts-container .post__description:first-letter {
+  text-transform: capitalize;
 }
 * body .posts-container .post__type {
   grid-area: type;
+}
+* body .posts-container .post__more {
+  grid-area: more;
 }/*# sourceMappingURL=posts.css.map */

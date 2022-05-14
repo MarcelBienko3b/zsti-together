@@ -21,14 +21,9 @@
         &__item {
 
             background-color: clr.$accent-tetriary;
+            color: clr.$font-primary;
             
             @include buttons;
-        
-            & a {
-                
-                color: clr.$font-secondary;
-
-            }
 
         }
 

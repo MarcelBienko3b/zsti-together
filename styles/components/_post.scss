@@ -7,13 +7,15 @@
         grid-row-gap: 0;
 
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
 
         grid-template-areas: 
             "author author . subject subject"
+            "hrf hrf hrf hrf hrf"
             "desc desc desc desc desc"
             "desc desc desc desc desc"
-            ". . . type type";
+            "hrl hrl hrl hrl hrl"
+            "type type . . more";
 
         flex-basis: 40%;
         gap: 0.5em;
@@ -31,28 +33,67 @@
         }
         
         &__author {
-        
+
             grid-area: author;
             font-size: font.$m;
-        
+
+        }
+
+        &__hr:first-of-type {
+
+            grid-area: hrf;
+
+            height: 1px;
+            margin: 0 20px;
+
+            background-color: clr.$accent-secondary;
+            border: none;
+
+        }
+
+        &__hr:last-of-type {
+
+            grid-area: hrl;
+
+            height: 1px;
+            margin: 0 20px;
+
+            background-color: clr.$accent-secondary;
+            border: none;
+
         }
         
-        &__subject {
-        
+        &__subject { 
+            
             grid-area: subject;
-        
+
+            text-transform: uppercase;
+
         }
         
-        &__description {
-        
+        &__description { 
+
             grid-area: desc;
-        
+
+            padding: 0 20px;
+
+            &:first-letter {
+
+                text-transform: capitalize;
+
+            }
+
         }
         
         &__type {
-        
-            grid-area: type;
-        
+            grid-area: type; 
+        }
+
+        &__more {
+
+            grid-area: more;
+
+
         }
         
     }
