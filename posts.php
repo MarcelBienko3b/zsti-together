@@ -32,13 +32,20 @@
                         types.type__name,
                         classes.class__name,
                         posts.post__id
-                    from posts 
-                    inner join subjects on subjects.subject__id = posts.post__subject
-                    left join students on students.student__id = posts.post__tutor
-                    left join teachers on teachers.teacher__id = posts.post__teacher
-                    inner join types on types.type__id = posts.post__type
-                    left join classes on classes.class__id = students.student__class
-                    ';
+                    from
+                        posts 
+                    inner join
+                        subjects on subjects.subject__id = posts.post__subject
+                    left join
+                        students on students.student__id = posts.post__tutor
+                    left join
+                        teachers on teachers.teacher__id = posts.post__teacher
+                    inner join
+                        types on types.type__id = posts.post__type
+                    left join
+                        classes on classes.class__id = students.student__class
+                    order by
+                        posts.post__id desc';
             
             $result = $conn->query($postsQuery);
 
