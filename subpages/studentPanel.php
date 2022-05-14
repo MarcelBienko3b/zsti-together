@@ -23,7 +23,13 @@
         
         <div class="myPosts">
 
-            <a href="createPostTutor.php">Utwórz ogłoszenie</a>
+            <?php
+
+                if ($_SESSION['student'][6]) {
+                    echo '<a href="createPostTutor.php">Utwórz ogłoszenie</a>';
+                };
+
+            ?>
 
             <?php 
                 $conn = new mysqli('localhost','root','','zsti_together_database');
