@@ -93,4 +93,12 @@
 }
 * body .posts-container .post__more {
   grid-area: more;
+  padding: 5px 0;
+  background-color: #002165;
+  border-radius: 5px;
+  color: #e5e5e5;
+}
+* body .posts-container .post__more:hover {
+  background-color: #e5e5e5;
+  color: #002165;
 }/*# sourceMappingURL=posts.css.map */

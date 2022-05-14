@@ -92,7 +92,18 @@
         &__more {
 
             grid-area: more;
+            padding: 5px 0;
 
+            background-color: clr.$bckg-tetriary;
+            border-radius: 5px;
+            color: clr.$font-secondary;
+
+            &:hover {
+
+                background-color: clr.$bckg-primary;
+                color: clr.$font-primary;
+
+            }
 
         }
         

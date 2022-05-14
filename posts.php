@@ -63,7 +63,7 @@
                                 
                             echo
                                 '<p class="post__type">'.$row[6].'</p>
-                                <button class="post__more" id="post_'.$row[8].'">Przejdź do ogłoszenia</button>
+                                <button type="button" class="post__more" id="post_'.$row[8].'">Zgłoś się</button>
                             </div>';
                     }
                 }
