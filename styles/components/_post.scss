@@ -98,10 +98,25 @@
             border-radius: 5px;
             color: clr.$font-secondary;
 
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+
             &:hover {
 
                 background-color: clr.$bckg-primary;
-                color: clr.$font-primary;
+
+                & > a {
+
+                    color: clr.$font-primary;
+
+                }
+
+            }
+
+            & a {
+
+                color: clr.$font-secondary;
 
             }
 

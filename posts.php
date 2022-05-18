@@ -70,7 +70,8 @@
                                 
                             echo
                                 '<p class="post__type">'.$row[6].'</p>
-                                <button type="button" class="post__more" id="post_'.$row[8].'">Zgłoś się</button>
+                                <div class="post__more" id="post_'.$row[8].'"><a href="/subpages/requestForm.php"
+                                onclick="<?php $_SESSION[\'clickedPost\']='.$row[8].'?>">Zgłoś się</a></div>
                             </div>';
                     }
                 }

@@ -97,8 +97,16 @@
   background-color: #002165;
   border-radius: 5px;
   color: #e5e5e5;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
 }
 * body .posts-container .post__more:hover {
   background-color: #e5e5e5;
+}
+* body .posts-container .post__more:hover > a {
   color: #002165;
+}
+* body .posts-container .post__more a {
+  color: #e5e5e5;
 }/*# sourceMappingURL=posts.css.map */

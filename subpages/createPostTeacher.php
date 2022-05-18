@@ -16,7 +16,7 @@
 
         <div class="form-group">
             <label for="description">Opis</label>
-            <textarea type="textarea" class="form-control" id="description" name="description"></textarea>
+            <textarea type="textarea" maxlength="255" class="form-control" id="description" name="description"></textarea>
         </div>
 
         <div class="form-group">
