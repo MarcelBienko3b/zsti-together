@@ -18,7 +18,7 @@
     <div class="panel-content">
 
         <div class="myAcc">
-            <p>Witam</p>
+            <?php require '../scripts/php/snippets/myAcc.php' ?>
         </div>  
         
         <div class="myPosts">
