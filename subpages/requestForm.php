@@ -8,7 +8,7 @@
 
     <?php
         session_start();
-        print_r($_SESSION);
+        print_r($_SESSION['clickedPost']);
     ?>
 
     <form action="scripts/php/request.php" method="POST">

@@ -44,8 +44,8 @@
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-areas: "author author . subject subject" "hrf hrf hrf hrf hrf" "desc desc desc desc desc" "desc desc desc desc desc" "hrl hrl hrl hrl hrl" "type type . . more";
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: "author author . subject subject" "hrf hrf hrf hrf hrf" "desc desc desc desc desc" "desc desc desc desc desc" "desc desc desc desc desc" "desc desc desc desc desc" "hrl hrl hrl hrl hrl" "type type . . more";
   flex-basis: 40%;
   gap: 0.5em;
   min-width: 400px;

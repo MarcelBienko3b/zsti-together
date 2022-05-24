@@ -69,15 +69,22 @@
                                 <h4 class="post__subject">'.$row[1].'</h2>';
                                 
                             echo
-                                '<p class="post__type">'.$row[6].'</p>
-                                <button type="button" class="post__more" id="post_'.$row[8].'">Zgłoś się</button>
-                            </div>';
+                                '<p class="post__type">'.$row[6].'</p>'?>
+                                <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/subpages/requestForm.php" onclick="toSession()">Zgłoś się</a></div>
+                                <script type="text/javascript">
+                                    function toSession() {
+                                        document.cookie = "id = '<?php echo $row[8] ?>'";
+                                    }
+                                </script>
+                            <?php echo '</div>';
                     }
                 }
                 echo '</div>';
             }
 
         ?>
+
+        
 
     </body>
 
