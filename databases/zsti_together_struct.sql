@@ -72,7 +72,6 @@ create table if not exists posts (
 create table if not exists requests (
 
     request__id int not null auto_increment primary key,
-    request__date datetime not null,
     request__post int,
     request__student int,
     
