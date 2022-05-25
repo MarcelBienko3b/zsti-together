@@ -70,12 +70,7 @@
                                 
                             echo
                                 '<p class="post__type">'.$row[6].'</p>'?>
-                                <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/subpages/requestForm.php" onclick="toSession()">Zgłoś się</a></div>
-                                <script type="text/javascript">
-                                    function toSession() {
-                                        document.cookie = "id = '<?php echo $row[8] ?>'";
-                                    }
-                                </script>
+                                <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/subpages/requestForm.php?postId=<?php echo $row[8] ?>">Zgłoś się</a></div>
                             <?php echo '</div>';
                     }
                 }

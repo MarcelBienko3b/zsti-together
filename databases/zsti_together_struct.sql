@@ -72,7 +72,6 @@ create table if not exists posts (
 create table if not exists requests (
 
     request__id int not null auto_increment primary key,
-    request__date datetime not null,
     request__post int,
     request__student int,
     
@@ -99,3 +98,4 @@ select
         inner join types on types.type__id = posts.post__type
         left join classes on classes.class__id = students.student__class
         where posts.post__tutor=curr_Id;
+

@@ -16,15 +16,10 @@
         <li id="myPosts">Moje posty</li>
     </ul>
     <div class="panel-content">
-
-        <div class="myAcc">
-            <?php require '../scripts/php/snippets/myAcc.php' ?>
-        </div>  
         
         <div class="myPosts">
 
             <?php
-
                 if ($_SESSION['student'][6]) {
                     echo '<a href="createPostTutor.php">Utwórz ogłoszenie</a>';
                 };
@@ -66,6 +61,10 @@
             ?>
 
         </div>
+
+        <div class="myAcc">
+            <?php require '../scripts/php/snippets/myAcc.php' ?>
+        </div>  
 
     </div>
 </div>
