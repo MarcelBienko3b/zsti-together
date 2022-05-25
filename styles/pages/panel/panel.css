@@ -41,14 +41,14 @@
   height: 90vh;
   margin: 1em auto;
 }
-* body .student-panel-menu {
+* body .panel-menu {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 15%;
 }
-* body .student-panel-menu li {
+* body .panel-menu li {
   width: 80%;
   display: grid;
   place-items: center;
@@ -56,7 +56,7 @@
   color: #002165;
   height: 2.5em;
 }
-* body .student-panel-menu li:hover {
+* body .panel-menu li:hover {
   width: 100%;
   background-color: #002165;
   color: #e5e5e5;

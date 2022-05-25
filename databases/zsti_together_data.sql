@@ -15,7 +15,7 @@ insert into subjects (subject__name) values
     ('projektowanie stron internetowych');
 
 insert into teachers (teacher__firstName, teacher__lastName, teacher__email, teacher__password, teacher__subject) values
-    ('Jan', 'Kowalski', 'jk@gmail.com', 'e06e2e2ff2f00cf0076710724efaa07b', 4);
+    ('Jan', 'Kowalski', 'jk@gmail.com', '202cb962ac59075b964b07152d234b70', 4);
 
 insert into classes (class__name, class__teacher) values
     ('-', 1),
