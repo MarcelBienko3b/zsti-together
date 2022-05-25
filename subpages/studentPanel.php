@@ -11,15 +11,11 @@
 <body>
 <?php require '../scripts/php/snippets/nav.php' ?>
 <div class="container">
-    <ul class="student-panel-menu">
+    <ul class="panel-menu">
         <li id="myAcc">Moje konto</li>
         <li id="myPosts">Moje posty</li>
     </ul>
     <div class="panel-content">
-
-        <div class="myAcc">
-            <?php require '../scripts/php/snippets/myAcc.php' ?>
-        </div>  
         
         <div class="myPosts">
 
@@ -65,6 +61,10 @@
                 }
             ?>
 
+        </div>
+
+        <div class="myAcc">
+            <?php require '../scripts/php/snippets/myAccStudent.php' ?>
         </div>
 
     </div>
