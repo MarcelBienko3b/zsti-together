@@ -14,14 +14,30 @@
     @include transition;
 
     body {
+        
+        background-color: #494949;
 
-        background-color: clr.$bckg-primary;
         font-family: font.$primary-family;
         font-size: font.$xxl;
 
         display: grid;
         height: 100vh;
         place-items: center;
+        overflow: hidden;
+
+        &::before {
+
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            z-index: -1;
+            background-image: url(../../../images/logo.png);
+            transform: rotate(-45deg);
+
+        }
 
         .log-container {
 
@@ -40,14 +56,14 @@
 
                 padding: 1em 5em;
                 border-radius: 10px;
-                background-color: clr.$bckg-secondary;
-                box-shadow: 10px 10px clr.$bckg-tetriary;
+                background-color: clr.$zsti-yellow;
+                box-shadow: 10px 10px clr.$zsti-blue;
 
                 &:hover {
 
-                    background-color: clr.$bckg-tetriary;
-                    color: clr.$accent-tetriary;
-                    box-shadow: 10px 10px clr.$accent-primary;
+                    background-color: clr.$zsti-blue;
+                    color: clr.$zsti-white;
+                    box-shadow: 10px 10px clr.$zsti-yellow;
 
                 }
 

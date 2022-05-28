@@ -15,9 +15,9 @@
 
     body {
 
-        background-color: clr.$bckg-primary;
+        background-color: clr.$zsti-white;
         font-family: font.$primary-family;
-        color: clr.$font-primary;
+        color: clr.$font-blue;
 
         display: grid;
         height: 100vh;
@@ -25,10 +25,10 @@
 
         .login {
 
-            background-color: clr.$bckg-secondary;
+            background-color: clr.$zsti-yellow;
             padding: 8em 5em;
             border-radius: 10px;
-            box-shadow: 10px 10px clr.$accent-secondary;
+            box-shadow: 10px 10px clr.$zsti-blue;
 
             .form {
 
@@ -55,7 +55,7 @@
                 input,
                 select {
 
-                    border: 2px solid clr.$bckg-tetriary;
+                    border: 2px solid clr.$zsti-blue;
                     border-radius: 10px;
                     padding: 0.5em;
 
@@ -69,8 +69,8 @@
 
                 input[type="submit"] {
 
-                    background-color: clr.$bckg-secondary;
-                    border: 1px solid clr.$accent-secondary;
+                    background-color: clr.$zsti-yellow;
+                    border: 1px solid clr.$zsti-blue;
                     height: 60%;
                     width: 40%;
                     margin: auto 0 auto auto;
@@ -78,9 +78,9 @@
 
                     &:hover {
 
-                        box-shadow: 0 0 5px clr.$accent-secondary;
-                        background-color: clr.$accent-secondary;
-                        color: clr.$font-secondary;
+                        box-shadow: 0 0 5px clr.$zsti-blue;
+                        background-color: clr.$zsti-blue;
+                        color: clr.$font-white;
                         cursor: pointer;
 
                     }

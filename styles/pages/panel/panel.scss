@@ -17,7 +17,7 @@
 
     body {
 
-        background-color: clr.$bckg-primary;
+        background-color: clr.$zsti-white;
         font-family: font.$primary-family;
 
         overflow: hidden;
@@ -49,8 +49,8 @@
                 display: grid;
                 place-items: center;
 
-                background-color: clr.$bckg-secondary;
-                color: clr.$font-primary;
+                background-color: clr.$zsti-yellow;
+                color: clr.$font-blue;
                 height: 2.5em
 
             }
@@ -59,8 +59,8 @@
 
                 width: 100%;
 
-                background-color: clr.$bckg-tetriary;
-                color: clr.$font-secondary;
+                background-color: clr.$zsti-blue;
+                color: clr.$font-white;
                 cursor: pointer;
 
             }
@@ -79,18 +79,18 @@
                 display: grid;
                 place-items: center;
                 border-radius: 5px;
-                border: 1px solid clr.$bckg-tetriary;
-                background-color: clr.$bckg-secondary;
+                border: 1px solid clr.$zsti-blue;
+                background-color: clr.$zsti-yellow;
                 width: 12em;
                 padding: 0.6em;
                 margin: 1em 0 0 0;
-                color: clr.$font-primary;
+                color: clr.$font-blue;
 
                 &:hover {
 
-                    background-color: clr.$bckg-tetriary;
-                    box-shadow: 0 0 10px clr.$bckg-tetriary;
-                    color: clr.$font-secondary;
+                    background-color: clr.$zsti-blue;
+                    box-shadow: 0 0 10px clr.$zsti-blue;
+                    color: clr.$font-white;
 
                 }
 

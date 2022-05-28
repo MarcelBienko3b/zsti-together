@@ -7,12 +7,24 @@
   transition: all 0.2s;
 }
 * body {
-  background-color: #e5e5e5;
+  background-color: #494949;
   font-family: Lato;
   font-size: 28px;
   display: grid;
   height: 100vh;
   place-items: center;
+  overflow: hidden;
+}
+* body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background-image: url(../../../images/logo.png);
+  transform: rotate(-45deg);
 }
 * body .log-container__list {
   display: flex;

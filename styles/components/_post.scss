@@ -26,9 +26,9 @@
         margin: 10px auto 10px auto;
         padding: 10px;
         border-radius: 5px;
-        background-color: clr.$bckg-secondary;
-        border: 1px solid clr.$accent-secondary;
-        box-shadow: 5px 5px clr.$bckg-tetriary;
+        background-color: clr.$zsti-yellow;
+        border: 1px solid clr.$zsti-blue;
+        box-shadow: 5px 5px clr.$zsti-blue;
 
         &--wide {
             flex-basis: 60%;
@@ -48,7 +48,7 @@
             height: 1px;
             margin: 0 20px;
 
-            background-color: clr.$accent-secondary;
+            background-color: clr.$zsti-blue;
             border: none;
 
         }
@@ -60,7 +60,7 @@
             height: 1px;
             margin: 0 20px;
 
-            background-color: clr.$accent-secondary;
+            background-color: clr.$zsti-blue;
             border: none;
 
         }
@@ -96,9 +96,9 @@
             grid-area: more;
             padding: 5px 0;
 
-            background-color: clr.$bckg-tetriary;
+            background-color: clr.$zsti-blue;
             border-radius: 5px;
-            color: clr.$font-secondary;
+            color: clr.$font-white;
 
             display: grid;
             place-content: center;
@@ -106,11 +106,11 @@
 
             &:hover {
 
-                background-color: clr.$bckg-primary;
+                background-color: clr.$zsti-white;
 
                 & > a {
 
-                    color: clr.$font-primary;
+                    color: clr.$font-blue;
 
                 }
 
@@ -118,7 +118,7 @@
 
             & a {
 
-                color: clr.$font-secondary;
+                color: clr.$font-white;
 
             }
 
