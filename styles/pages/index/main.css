@@ -7,7 +7,7 @@
   transition: all 0.2s;
 }
 * body {
-  background-color: #494949;
+  background-color: #e5e5e5;
   font-family: Lato;
   font-size: 28px;
   display: grid;
@@ -23,7 +23,7 @@
   top: -50%;
   left: -50%;
   z-index: -1;
-  background-image: url(../../../images/logo.png);
+  background-image: url(../../../images/logo_black.png);
   transform: rotate(-45deg);
 }
 * body .log-container__list {
@@ -35,12 +35,12 @@
 }
 * body .log-container__item {
   padding: 1em 5em;
-  border-radius: 10px;
-  background-color: #f9b522;
-  box-shadow: 10px 10px #002165;
+  border-radius: 8px;
+  background-color: #002165;
+  color: #e5e5e5;
 }
 * body .log-container__item:hover {
   background-color: #002165;
-  color: #e5e5e5;
+  color: #f9b522;
   box-shadow: 10px 10px #f9b522;
 }/*# sourceMappingURL=main.css.map */

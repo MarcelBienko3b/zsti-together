@@ -9,16 +9,28 @@
 * body {
   background-color: #e5e5e5;
   font-family: Lato;
-  color: #002165;
+  color: #e5e5e5;
   display: grid;
   height: 100vh;
   place-items: center;
+  overflow: hidden;
+}
+* body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background-image: url(../../../images/logo_black.png);
+  transform: rotate(-45deg);
 }
 * body .login {
-  background-color: #f9b522;
-  padding: 8em 18em;
-  border-radius: 10px;
-  box-shadow: 10px 10px #002165;
+  background-color: #002165;
+  padding: 6em 8em;
+  border-radius: 2px;
+  box-shadow: 10px 10px #f9b522;
 }
 * body .login .form {
   display: grid;
@@ -38,8 +50,12 @@
 }
 * body .login .form input,
 * body .login .form select {
-  border: 2px solid #002165;
-  border-radius: 10px;
+  width: 30em;
+  background-color: #002165;
+  color: #e5e5e5;
+  border: solid #f9b522;
+  border-width: 0 0 2px 0;
+  border-radius: 2px;
   padding: 0.5em;
 }
 * body .login .form select {
@@ -47,16 +63,15 @@
 }
 * body .login .form input[type=submit] {
   background-color: #f9b522;
-  border: 1px solid #002165;
+  border-radius: 2px;
+  color: #002165;
   height: 60%;
   width: 40%;
   margin: auto 0 auto auto;
   margin-top: 20px;
 }
 * body .login .form input[type=submit]:hover {
-  box-shadow: 0 0 5px #002165;
-  background-color: #002165;
-  color: #e5e5e5;
+  width: 50%;
   cursor: pointer;
 }
 * body .login .form__firstName {

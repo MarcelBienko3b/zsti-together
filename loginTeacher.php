@@ -27,7 +27,7 @@
                       <input type="password" class="form-control" id="password" name="password"/>
                     </div>
 
-                    <input type="submit" class="form__btn item" />
+                    <input type="submit" class="form__btn item" value="Zaloguj się"/>
             </form>
         </div>
 

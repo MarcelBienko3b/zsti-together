@@ -7,6 +7,7 @@
 
 @import '../../components/reset';
 @import '../../components/animations';
+@import '../../components/logoBackground';
 
 * {
 
@@ -17,18 +18,20 @@
 
         background-color: clr.$zsti-white;
         font-family: font.$primary-family;
-        color: clr.$font-blue;
+        color: clr.$font-white;
 
         display: grid;
         height: 100vh;
         place-items: center;
 
+        @include logo-background;
+
         .login {
 
-            background-color: clr.$zsti-yellow;
-            padding: 8em 18em;
-            border-radius: 10px;
-            box-shadow: 10px 10px clr.$zsti-blue;
+            background-color: clr.$zsti-blue;
+            padding: 6em 8em;
+            border-radius: 2px;
+            box-shadow: 10px 10px clr.$zsti-yellow;
 
             .form {
 
@@ -56,8 +59,12 @@
                 input,
                 select {
 
-                    border: 2px solid clr.$zsti-blue;
-                    border-radius: 10px;
+                    width: 30em;
+                    background-color: clr.$zsti-blue;
+                    color: clr.$font-white;
+                    border: solid clr.$zsti-yellow;
+                    border-width: 0 0 2px 0;
+                    border-radius: 2px;
                     padding: 0.5em;
 
                 }
@@ -71,7 +78,8 @@
                 input[type="submit"] {
 
                     background-color: clr.$zsti-yellow;
-                    border: 1px solid clr.$zsti-blue;
+                    border-radius: 2px;
+                    color: clr.$font-blue;
                     height: 60%;
                     width: 40%;
                     margin: auto 0 auto auto;
@@ -79,9 +87,7 @@
 
                     &:hover {
 
-                        box-shadow: 0 0 5px clr.$zsti-blue;
-                        background-color: clr.$zsti-blue;
-                        color: clr.$font-white;
+                        width: 50%;
                         cursor: pointer;
 
                     }
