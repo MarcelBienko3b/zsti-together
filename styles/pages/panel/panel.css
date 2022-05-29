@@ -162,4 +162,20 @@
 }
 * body .posts-container .post__more a {
   color: #e5e5e5;
+}
+* body .addTutors .list {
+  text-align: center;
+}
+* body .addTutors .list__save {
+  width: 100px;
+}
+* body .addTutors .list__class {
+  width: 10%;
+  text-transform: uppercase;
+}
+* body .addTutors .list__fname, * body .addTutors .list__lname {
+  width: 20%;
+}
+* body .addTutors .list__checkbox {
+  width: 20%;
 }/*# sourceMappingURL=panel.css.map */

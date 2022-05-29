@@ -67,23 +67,30 @@
                             inner join classes on class__id = student__class;';
                 $result = $conn->query($listQuery);
 
+                $_SESSION['studentsNum'] = 0;
+
                 if ($result->num_rows > 0) {
-                    echo '<form class="list-form">
+                    echo '<form class="list-form list" action="../scripts/php/setTutors.php" method="post">
                             <table>';
                     while ($rows = $result->fetch_all()) {
                         foreach ($rows as $row) {
+                            $_SESSION['studentsNum']++;
                             echo '<tr>';
-                            echo '<td>'.$row[0].'</td>
-                                <td>'.$row[2].'</td>
-                                <td>'.$row[3].'</td>
-                                <td><input type="checkbox" id="isTutor" name="isTutor"';
-                                if ($row[4]) echo 'checked="true"';
+                            echo '<td class="list__class">'.$row[0].'</td>
+                                <td class="list__fname">'.$row[2].'</td>
+                                <td class="list__lname">'.$row[3].'</td>
+                                <td class="list__checkbox">
+                                    <input type="hidden" name="isTutor'.$row[1].'" value="0_'.$row[1].'">
+                                    <input type="checkbox" name="isTutor'.$row[1].'" value="1_'.$row[1].'"';
+                                if ($row[4]) echo 'checked';
                                 echo '></td>';
                             echo '</tr>';
                         }
                     }
-                    echo '</table>';
-                    echo '<input type="submit" value="Zapisz"></form>';
+                    echo '</table>
+                        <input type="submit" value="Zapisz" class="list__save">
+                    </form>';
+                    
                 }
             ?>
         </div>

@@ -113,6 +113,43 @@
             @include post;
 
         }
+
+        .addTutors {
+
+            .list {
+
+                text-align: center;
+
+                &__save {
+
+                    width: 100px;
+
+                }
+
+                &__class {
+
+                    width: 10%;
+                    text-transform: uppercase;
+
+                }
+
+                &__fname,
+                &__lname {
+
+                    width: 20%;
+
+                }
+
+                &__checkbox {
+
+                    width: 20%;
+
+                }
+
+            }
+
+        }
+
     }
 
 }

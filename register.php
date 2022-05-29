@@ -20,27 +20,27 @@
 
                     <div class="form__firstName item">
                       <label for="firstName">Imię</label><br>
-                      <input type="text" class="form-control" id="firstName" name="firstName"/>
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Jan" required/>
                     </div>
 
                     <div class="form__lastName item">
                       <label for="lastName">Nazwisko</label><br>
-                      <input type="text" class="form-control" id="lastName" name="lastName"/>
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Kowalski" required/>
                     </div>
 
                     <div class="form__email item">
                       <label for="email">E-mail</label><br>
-                      <input type="email" class="form-control" id="email" name="email"/>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="jan.kowalski@example.pl" required/>
                     </div>
 
                     <div class="form__pass item">
                       <label for="password">Hasło</label><br>
-                      <input type="password" class="form-control" id="password" name="password"/>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="********" required/>
                     </div>
 
                     <div class="form__checkPass item">
                       <label for="checkPassword">Powtórz hasło</label><br>
-                      <input type="password" class="form-control" id="checkPassword" name="checkPassword"/>
+                      <input type="password" class="form-control" id="checkPassword" name="checkPassword" placeholder="********" required/>
                     </div>
 
                     <div class="form__class item">

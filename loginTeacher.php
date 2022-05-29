@@ -19,12 +19,12 @@
             <form action="scripts/php/loginTeacher.php" method="post" class="login__form form">
                     <div class="form__email item">
                       <label for="email">E-mail</label><br>
-                      <input type="email" class="form-control" id="email" name="email"/>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="jan.kowalski@example.pl"/>
                     </div>
 
                     <div class="form__pass item">
                       <label for="password">Hasło</label><br>
-                      <input type="password" class="form-control" id="password" name="password"/>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="********"/>
                     </div>
 
                     <input type="submit" class="form__btn item" value="Zaloguj się"/>

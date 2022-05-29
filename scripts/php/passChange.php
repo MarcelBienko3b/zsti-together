@@ -17,7 +17,7 @@ if($_SESSION['student']=='') {
     $passQuery="select student__password from students where student__email=\"".$email."\";";
     $pass = mysqli_fetch_array(mysqli_query($conn,$passQuery),MYSQLI_NUM);
     if(md5($_POST['oldPass'])==$pass[0]) {
-        header("http://127.0.0.1/subpages/studentPanel.php");
+        header("../../subpages/studentPanel.php");
     } else {
         echo 'Podales zle stare haslo';
     }
