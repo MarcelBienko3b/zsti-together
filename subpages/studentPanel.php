@@ -23,7 +23,10 @@
 
                 if ($_SESSION['student'][6]) {
                     echo '<a href="createPostTutor.php">Utwórz ogłoszenie</a>';
-                };
+                }
+                else { 
+                    echo '<h1>Aby tworzyć posty poproś nauczyciela, aby zarejestrował Cię jako tutora</h1>';
+                }
 
             ?>
 
