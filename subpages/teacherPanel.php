@@ -83,7 +83,7 @@
                         }
                     }
                     echo '</table>
-                        <input type="submit" value="Zapisz" class="list__save">
+                        <input type="submit" value="Zatwierdź" class="list__save">
                     </form>';
                     
                 }
