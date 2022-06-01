@@ -68,7 +68,6 @@
                                             
                                         echo
                                             '<p class="post__type">'.$row[6].'</p>'?>
-                                            <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/zsti-together/subpages/requestForm.php?postId=<?php echo $row[8] ?>">Zgłoś się</a></div>
                                         <?php echo '</div>';
                                 }
                             }
@@ -102,7 +101,7 @@
                                     
                                 echo
                                     '<p class="post__type">'.$row[6].'</p>'?>
-                                    <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/zsti-together/subpages/requestForm.php?postId=<?php echo $row[8] ?>">Wypisz się</a></div>
+                                    <div class="post__more" id="post__<?php echo $row[8] ?>"><a href="/zsti-together/subpages/unsubscribeForm.php?postId=<?php echo $row[8] ?>">Wypisz się</a></div>
                                 <?php echo '</div>';
                         }
                     }
