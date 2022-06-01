@@ -50,5 +50,5 @@ insert into types (type__name) values
     ('Kółko wyrównawcze');
 
 insert into students (student__firstName, student__lastName, student__email, student__password, student__class, student__isTutor) values 
-    ('Jurek', 'Ciurek', 'jo@gmail.com', 'e06e2e2ff2f00cf0076710724efaa07b', 17, 0),
+    ('Jurek', 'Ciurek', 'jo@gmail.com', '202cb962ac59075b964b07152d234b70', 17, 0),
     ('John', 'Kowalski', 'jok@gmail.com', '202cb962ac59075b964b07152d234b70', 17, 1);
