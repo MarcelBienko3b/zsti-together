@@ -20,14 +20,11 @@
                     set students.student__isTutor = '.$arr[$i][$bool].'
                     where students.student__id = '.$arr[$i][$id].'';
 
-        echo "update students
-        set students.student__isTutor = $arr[$i]['bool']
-        where students.student__id = $arr[$i]['id']".'<br>';
 
         mysqli_query($conn,$setQuery);
 
     }
-
-    header("../../subpages/teacherPanel.php");
+    
+    header("Location: ../../subpages/teacherPanel.php");
     
 ?>

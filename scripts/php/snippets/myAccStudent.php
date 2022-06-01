@@ -7,7 +7,7 @@
 </br>
 <h3>Zmień hasło</h3>
 <div class="login">
-<form action="../../subpages/studentPanel.php" method="post">
+<form action="../subpages/studentPanel.php" method="post">
     Podaj stare hasło
     <input type="password" id="oldPass" name="oldPass">
     <br>

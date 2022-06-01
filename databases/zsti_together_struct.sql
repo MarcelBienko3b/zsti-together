@@ -80,21 +80,34 @@ create table if not exists requests (
 
 );
 
-CREATE PROCEDURE getPostsForUser
+CREATE PROCEDURE getPostsForTeacher
+(IN curr_Id int)
+select 
+    posts.post__body,
+    subjects.subject__name,
+    teachers.teacher__firstName,
+    teachers.teacher__lastName,
+    types.type__name
+        from posts 
+        inner join subjects on subjects.subject__id = posts.post__subject
+        left join teachers on teachers.teacher__id = posts.post__teacher
+        inner join types on types.type__id = posts.post__type
+        where posts.post__teacher=curr_Id;
+
+CREATE PROCEDURE getPostsForStudent
 (IN curr_Id int)
 select 
     posts.post__body,
     subjects.subject__name,
     students.student__firstName,
     students.student__lastName,
-    teachers.teacher__firstName,
-    teachers.teacher__lastName,
     types.type__name,
     classes.class__name
         from posts 
         inner join subjects on subjects.subject__id = posts.post__subject
         left join students on students.student__id = posts.post__tutor
-        left join teachers on teachers.teacher__id = posts.post__teacher
         inner join types on types.type__id = posts.post__type
         left join classes on classes.class__id = students.student__class
         where posts.post__tutor=curr_Id;
+
+

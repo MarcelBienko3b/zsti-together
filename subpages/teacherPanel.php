@@ -21,13 +21,13 @@
         
         <div class="myPosts">
 
-            <?php echo '<a href="createPostTutor.php">Utwórz ogłoszenie</a>' ?>
+            <?php echo '<a href="createPostTeacher.php">Utwórz ogłoszenie</a>' ?>
 
             <?php 
                 $conn = new mysqli('localhost','root','','zsti_together_database');
 
                 $postsQuery = '
-                    call getPostsForUser('.$_SESSION['teacher'][0].');';
+                    call getPostsForTeacher('.$_SESSION['teacher'][0].');';
                     
                 $result = $conn->query($postsQuery);
                 echo '<br>';
@@ -38,17 +38,12 @@
                         foreach ($rows as $row) {
                             echo 
                                 '<div class="posts-container__post post post--wide">';
-                                if ($row[4] == null && $row[5] == null) {
-                                    echo '
-                                    <h4 class="post__author">'.$row[2].' '.$row[3].' | '.$row[7].'</h4>';
-                                } elseif ($row[2] == null && $row[3] == null) {
-                                    echo '
-                                    <h4 class="post__author">'.$row[4].' '.$row[5].'</h4>';
-                                }
+                                echo '<h4 class="post__author">'.$row[2].' '.$row[3].'</h4>';
+    
                                 echo '
                                     <h3 class="post__description">'.$row[0].'</h3>
                                     <h4 class="post__subject">'.$row[1].'</h4>
-                                    <p class="post__type">'.$row[6].'</p>
+                                    <p class="post__type">'.$row[4].'</p>
                                 </div>';
                             echo '<br>';
                         }

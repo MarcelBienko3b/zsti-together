@@ -15,8 +15,10 @@
         $execval = $stmt->execute();
         $stmt->close();
         $conn->close();
-
-        header("Location: ../../subpages/studentPanel.php");
+        if($_SESSION['student'])
+            header("Location: ../../subpages/studentPanel.php");
+        else 
+        header("Location: ../../subpages/teacherPanel.php");
         exit();
     }
 ?>
